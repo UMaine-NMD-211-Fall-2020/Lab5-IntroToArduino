@@ -67,6 +67,7 @@ void loop() {
 }
 ```
 #### Morse Code
+I would make dot & dash into functions too
 ```arduino
 /* Lab 5 - NMD 211
  * FirstName LastName
