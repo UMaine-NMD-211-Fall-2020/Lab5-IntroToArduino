@@ -67,7 +67,7 @@ void loop() {
 }
 ```
 #### Morse Code
-I would make dot & dash into functions too
+I would make dot & dash into functions too ... and space! We ran out of time. Basically, any building block should be a function
 ```arduino
 /* Lab 5 - NMD 211
  * FirstName LastName
