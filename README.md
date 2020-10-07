@@ -26,11 +26,11 @@ Submit your code in a folder labeled `Lab5_FirstName_LastName` on google drive, 
 
 ## Resources
 
-## Examples of Arduino & Art
+### Examples of Arduino & Art
 - [Arduino Art](http://arduinoarts.com/2014/05/9-amazing-projects-where-arduino-art-meet/)
 - [Artist who uses Arduino: Erin Gee](https://eringee.net/category/portfolio/robotics/)
 
-## Online Intro to Arduino Walk throughs
+### Online Intro to Arduino Walk throughs
 - [Arduino Workshop for Beginners, by Core Electronics](https://youtu.be/EdXQUEMOfgU)
 The first 14 videos go into detail about what we are doing this week. Much of what we do this week will be Arduino specific, but some things will carry over from class. 
 - [Channel of Arduino Projects & Information, by NYU ITP](https://vimeo.com/showcase/6565160?page=3)
