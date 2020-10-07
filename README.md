@@ -12,7 +12,7 @@ This lab introduces arduino.
 ### Submissions
 Submit your code in a folder labeled `Lab5_FirstName_LastName` on google drive, or make a github folder, fork this README, then pull request to add the link to your file. 
 
-1. Commented Arduino code with a basic blinking pattern, as zip file or Github submission. 
+1. Commented Arduino code with a basic blinking pattern, as zip file or Github submission. Should have lab info at to p. 
 
 (  2, 3, 4 in a separte document in the google drive or in the github readme ).  
 
@@ -22,7 +22,9 @@ Submit your code in a folder labeled `Lab5_FirstName_LastName` on google drive, 
 
 4. What would you be interested in doing with an Arduino? Write a paragraph, describing either muliple projects of interest or describing one project in depth.
 
-5. **Extra** Use Arduinio LED to send a Morse Code message. Class use recommended. Zip & Google Drive or Github. 
+5. Use Arduinio LED to send a Morse Code message. Class use recommended. Zip & Google Drive or Github. Make video of it. 
+
+6. **Extra** Add extra leds to your setup, and make something interesting with lots of leds. Document as done above. 
 
 ## Resources
 
@@ -43,6 +45,82 @@ The first 14 videos go into detail about what we are doing this week. Much of wh
 
 ## Class Code
 ### Wednesday
+#### Blink LED 
+```arduino
+int led_pin = 13;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode( led_pin , OUTPUT );  // tell the Arduino which pin we're using (Pin 13)
+  Serial.begin(9600);       // start the serial monitor with rate baudrate
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  digitalWrite( led_pin , HIGH );  // LED ON
+  Serial.println("LED ON");
+  delay( 2000 );               // wait 2seconds
+  digitalWrite( led_pin , LOW );   // LED OFF
+  Serial.println("LED OFF");
+  delay ( 333 );              // wait 1/3 second
+
+}
+```
+#### Morse Code
+```arduino
+/* Lab 5 - NMD 211
+ * FirstName LastName
+ * Date
+ * 
+ * Morse Code
+ * 
+ * Write the message, "Hello World!" in Morse Code.
+ * - Dots (short length lights) - 2 second
+ * - Dashes ( long length lights) -  4 seconds
+ * - break between dots and dashes  - 0.25 seconds
+ * - break between letters - 0.5 seconds
+ * - break between words - 1 second
+*/
+int longLength = 2000 ; // 2 seconds
+int shortLenth = 1000 ; // 1 second
+
+int led_pin = 13;       // pin to use
+
+void setup() {
+  // put your setup code here, to run once:
+
+    pinMode( led_pin , OUTPUT );  // tell the Arduino which pin we're using (Pin 13)  
+    Serial.begin(9600);       // start the serial monitor with rate baudrate
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  A();
+  
+}
+
+void A(){
+  Serial.println("A");            // Letter
+  // Dot
+  digitalWrite( led_pin , HIGH );  // LED ON
+  delay( 2000 );                   // wait 2seconds
+  digitalWrite( led_pin , LOW );   // LED OFF
+  
+  // Space between dots and dashes
+  delay ( 250 );                    // wait 1/4 second
+  
+  // Dash
+  digitalWrite( led_pin , HIGH );  // LED ON
+  delay( 4000 );                   // wait 4 seconds
+  digitalWrite( led_pin , LOW );   // LED OFF
+  
+  // Space between letters
+  delay ( 500 );                    // wait 1/4 second
+}
+
+
+```
 ### Friday 
 
 ## Submissions
