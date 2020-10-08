@@ -126,8 +126,8 @@ void A(){
 ```
 ##### What my code would look like with proper formatting, commenting, and substitutions
 It would have
-- functions `dot()` and `dash`
-- no hardcoded numbers in delays. Use the appropriate variables. S
+- functions `dot()` and `dash()`
+- no hardcoded numbers inside delays. Use the appropriate variables. 
 - comments before start of new idea
 - comment next to functions you think I won't understand right away
 
