@@ -84,8 +84,8 @@ I would make dot & dash into functions too ... and space! We ran out of time. Ba
  * - break between letters - 0.5 seconds
  * - break between words - 1 second
 */
-int longLength = 2000 ; // 2 seconds
-int shortLenth = 1000 ; // 1 second
+int longLength = 4000 ; // 4 seconds, dash
+int shortLenth = 2000 ; // 2 second, dot
 
 int led_pin = 13;       // pin to use
 
