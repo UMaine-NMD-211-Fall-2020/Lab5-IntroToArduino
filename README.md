@@ -22,7 +22,7 @@ Submit your code in a folder labeled `Lab5_FirstName_LastName` on google drive, 
 
 4. What would you be interested in doing with an Arduino? Write a paragraph, describing either muliple projects of interest or describing one project in depth.
 
-5. Use Arduinio LED to send a Morse Code message. Class use recommended. Zip & Google Drive or Github. Make video of it. 
+5. Use Arduinio LED to send a Morse Code message. Class or function use recommended. Zip & Google Drive or Github. Make video of it. 
 
 6. **Extra** Add extra leds to your setup, and make something interesting with lots of leds. Document as done above. 
 
