@@ -68,6 +68,8 @@ void loop() {
 ```
 #### Morse Code
 I would make dot & dash into functions too ... and space! We ran out of time. Basically, any building block should be a function
+
+##### What my code looked like at the end of lab
 ```arduino
 /* Lab 5 - NMD 211
  * FirstName LastName
@@ -84,6 +86,61 @@ I would make dot & dash into functions too ... and space! We ran out of time. Ba
 */
 int longLength = 2000 ; // 2 seconds
 int shortLenth = 1000 ; // 1 second
+
+int led_pin = 13;       // pin to use
+
+void setup() {
+  // put your setup code here, to run once:
+
+    pinMode( led_pin , OUTPUT );  // tell the Arduino which pin we're using (Pin 13)  
+    Serial.begin(9600);       // start the serial monitor with rate baudrate
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  A();
+  
+}
+
+void A(){
+  Serial.println("A");            // Letter
+  // Dot
+  digitalWrite( led_pin , HIGH );  // LED ON
+  delay( 2000 );                   // wait 2seconds
+  digitalWrite( led_pin , LOW );   // LED OFF
+  
+  // Space between dots and dashes
+  delay ( 250 );                    // wait 1/4 second
+  
+  // Dash
+  digitalWrite( led_pin , HIGH );  // LED ON
+  delay( 4000 );                   // wait 4 seconds
+  digitalWrite( led_pin , LOW );   // LED OFF
+  
+  // Space between letters
+  delay ( 500 );                    // wait 1/4 second
+}
+
+
+```
+##### What my code would look like with proper formatting, commenting, and substitutions
+```arduino
+/* Lab 5 - NMD 211
+ * FirstName LastName
+ * Date
+ * 
+ * Morse Code
+ * 
+ * Write the message, "Hello World!" in Morse Code.
+ * - Dots (short length lights) - 2 second
+ * - Dashes ( long length lights) -  4 seconds
+ * - break between dots and dashes  - 0.25 seconds
+ * - break between letters - 0.5 seconds
+ * - break between words - 1 second
+*/
+int longLength = 4000 ; // 4 seconds - dash
+int shortLenth = 2000 ; // 2 second - dot
 
 int led_pin = 13;       // pin to use
 
