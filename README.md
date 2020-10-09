@@ -132,7 +132,107 @@ It would have
 - comment next to functions you think I won't understand right away
 
 ### Friday 
+#### Blink LED
+```arduino
+/* Lab 5 - NMD 211
+ * FirstName LastName
+ * October 9, 2020
+ * 
+ * Blink LED
+ * 
+ * To run, upload code
+*/
+int pinIn = 13;                   // pin powering LED 
 
+int timeLEDOn = 948 ;             // length of time LED On
+int timeLEDOff = 4389 ;           // length of time LED Off
+
+void setup() {
+  // put your setup code here, to run once:
+
+  pinMode(pinIn, OUTPUT);          // set pin 13 to put out current
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  // Turn LED on
+  digitalWrite( pinIn , HIGH ); // write to pin pinIN with full power
+  // wait
+  delay(timeLEDOn);  //wait 1 second
+  // Turn LED off
+  digitalWrite( pinIn , LOW ); // write to pin pinIN with full power
+  // wait
+  delay(timeLEDOff);  //wait 1 second
+
+}
+```
+#### Morse Code
+```arduino
+/* Lab 5 - NMD 211
+   FirstName LastName
+   October 9, 2020
+
+   Morse Code
+   - dots : 300 ms
+   - dashes: 1200 ms
+   - space between dots &/or dashes: 100 ms
+   - space between letters: 300 ms
+   - space between words: 2000 ms
+*/
+// global variables
+int pinIn = 13;                   // pin powering LED
+
+int dotLength = 300;              // dots length
+int dashLength = 1200;            // dash length
+int dotDashSpace = 100;           // space between dots and/or dashes
+int letterSpace = 300;            // space between letters
+int wordSpace = 2000;             // space between words
+
+void setup() {
+  // put your setup code here, to run once:
+
+  pinMode( pinIn, OUTPUT); // set pin to current output
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  A(); // Letter A
+}
+
+/* HELPER Functions */
+
+void dot() { // make a dot
+  // Turn on
+  digitalWrite( pinIn , HIGH );     // write to pin pinIn with full power
+  // wait
+  delay( dotLength );
+  // turn off
+  digitalWrite( pinIn, LOW );       // write to pin pinIn with no power
+}
+
+void dash() { // make a dash
+  // Turn on
+  digitalWrite( pinIn , HIGH );     // write to pin pinIn with full power
+  // wait
+  delay( dashLength );
+  // turn off
+  digitalWrite( pinIn, LOW );       // write to pin pinIn with no power
+}
+
+void A() { // make letter A
+  dot();
+  // wait between dot and dash
+  delay( dotDashSpace );
+
+  dash();
+  // wait between letters
+  delay ( letterSpace );
+  }
+```
 ## Submissions
 If you plan to submit on github, submit below 
 - [Lab5-FirstName-LastName](http://www.example.com)
