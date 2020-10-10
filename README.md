@@ -136,3 +136,4 @@ It would have
 ## Submissions
 If you plan to submit on github, submit below 
 - [Lab5-FirstName-LastName](http://www.example.com)
+- [Lab5-Elijah-Story](https://github.com/ElijahStory/Lab5-Elijah-Story)
